@@ -1,6 +1,7 @@
 import  sys#导入sys包
 import  pygame#导入pygame包
 from adding_ship_image.settings import Settings
+from  adding_ship_image.ship import Ship
 #
 # def run_game():
 #     #初始化游戏并创建一个屏幕对象
@@ -22,14 +23,16 @@ from adding_ship_image.settings import Settings
 # #初始化游戏并开始游戏
 # run_game()
 #----------------------------------------------------------------------------------------------------------------
+'''''使用类优化'''
 def run_game():
     #初始化pygame,设置和屏幕对象
     pygame.init()
-    ai_settings=Settings()
+    ai_settings=Settings()#调用Sttings类
     screen=pygame.display.set_mode((
         ai_settings.screen_width,
         ai_settings.screen_height))
     pygame.display.set_caption('飞机大战')
+    ship = Ship (screen)
     #开始游戏循环
     while True:
         # 监视键盘和鼠标事件
@@ -38,6 +41,7 @@ def run_game():
             if event.type==pygame.QUIT:
                 sys.exit()#退出游戏
             screen.fill(ai_settings.bg_color)#使用screnn.fill()方法填充背景颜色
+            ship.blitme()
             #让最近绘制的屏幕可见
             pygame.display.flip()
 run_game()
