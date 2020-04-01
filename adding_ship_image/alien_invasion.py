@@ -15,7 +15,7 @@ def run_game():
             #检测到退出 使用pgame.QUIT()和sys.exit()方法退出游戏
             if event.type==pygame.QUIT:
                 sys.exit()#退出游戏
-            screen.fill(bg_color)#调用屏幕颜色
+            screen.fill(bg_color)#使用screnn.fill()方法填充背景颜色
             #让最近绘制的屏幕可见
             pygame.display.flip()
 #初始化游戏并开始游戏
