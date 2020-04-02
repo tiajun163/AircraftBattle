@@ -10,8 +10,8 @@ class Ship():
         self.screen_rect=screen.get_rect()
         
         #将每艘飞机放在屏幕底部中央
-        self.rect.centerx=self.screen_rect.centerx
-        self.rect.bottom=self.screen_rect.bottom
+        self.rect.centerx=self.screen_rect.centerx#放在中央位置
+        self.rect.bottom=self.screen_rect.bottom#放在底部
     def blitme( self ):
         """在指定的位置绘制飞机"""
         self.screen.blit(self.image,self.rect)
