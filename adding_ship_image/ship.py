@@ -5,7 +5,7 @@ class Ship():
         #初始化飞机并设置其初始位置
         self.screen=screen
         #加载飞机图片并获取外接矩形
-        self.image=pygame.image.load('images/ship.bmp')
+        self.image=pygame.image.load('images/ship.bmp')#使用了pygame.image.load()加载图片
         self.rect=self.image.get_rect()
         self.screen_rect=screen.get_rect()
         
